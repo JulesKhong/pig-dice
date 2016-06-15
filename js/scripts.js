@@ -8,7 +8,10 @@ function Player (){ //change to a player object.**
 var randomNumber;
 var upper = 6;
 var rollValue;
-
+function disableButton(){
+  document.getElementById("roll-player1").disabled = true;
+  document.getElementById("hold-player1").disabled = true;
+}
 // CREATES A RANDOM NUMBER, AND ASSIGNS A POINTS VALUE TO IT. PUSHES ROLLS TO ROLL
 Player.prototype.getRandomNumber = function() { //this should be a prototype that runs on a player object
   randomNumber = Math.floor(Math.random() * upper) + 1;
@@ -16,6 +19,7 @@ Player.prototype.getRandomNumber = function() { //this should be a prototype tha
   this.score = 0;
   alert("You rolled a 1! Your turn is over!");
   this.rolls = [];
+  disableButton();
   }
   else {
   rollValue = randomNumber;
@@ -28,6 +32,11 @@ Player.prototype.calculateScore = function() {
     this.score += this.rolls[i];
   } this.totalScore += this.score;
   this.rolls = [];
+}
+Player.prototype.youWin = function(){
+  if (this.totalScore >= 100){
+    alert("You win!");
+  }
 }
 //
 // Player.prototype.calculateScore = function() {
@@ -65,6 +74,7 @@ var playerTwo;
    $("#total-score1").text(playerOne.totalScore);
    this.score = 0;
    $("#current-series1").text("");
+   disableButton();
  });
 });
 });
