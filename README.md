@@ -25,9 +25,13 @@ This game allows 2 users to play the game. Each user can roll a dice, adding to 
   ExampleInput: 3, 4, 2 (three rolls)
   ExampleOutput: 9
 
-If the rolled number is 1, the player is alerted that their turn is over, and they get no additional points for that turn.
+* If the rolled number is 1, the player is alerted that their turn is over, and they get no additional points for that turn.
+  ExampleInput: 3, 4, 1
+  ExampleOutput: 0
 
-For each roll, the new value is added to the player's total score.
+* For each roll, the total amount of points for that turn is added to the player's total score.
+  ExampleInput: 3, 5, 2
+  ExampleOutput: 9 (total score so far) + 10 = 19
 
 * The player's rolls for their current turns will be displayed at the bottom of the page.
 
