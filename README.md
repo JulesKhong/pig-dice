@@ -25,6 +25,8 @@ If the rolled number is 1, the player is alerted that their turn is over, and th
 
 For each roll, the new value is added to the player's total score.
 
+The player's rolls for their current turns will be displayed at the bottom of the page.
+
 When a player's total score equals 100, the game is over, and that player wins.
 
 ### Known Bugs
