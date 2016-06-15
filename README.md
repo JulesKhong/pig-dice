@@ -17,15 +17,19 @@ This game allows 2 users to play the game. Each user can roll a dice, adding to 
 
 ### Specifications
 
-When a user hits the "roll" button, a random number will be generated from 1-6, and displayed on the page.
+* When a user hits the "roll" button, a random number will be generated from 1-6, and displayed on the page.
+  ExampleInput: click
+  ExampleOutput: 5
 
-If the rolled number is >1, the number will be added to their score, and they can hit the roll button again.
+* If the rolled number is >1, the number will be added to their score, and they can hit the roll button  again.
+  ExampleInput: 3, 4, 2 (three rolls)
+  ExampleOutput: 9
 
 If the rolled number is 1, the player is alerted that their turn is over, and they get no additional points for that turn.
 
 For each roll, the new value is added to the player's total score.
 
-The player's rolls for their current turns will be displayed at the bottom of the page.
+* The player's rolls for their current turns will be displayed at the bottom of the page.
 
 When a player's total score equals 100, the game is over, and that player wins.
 
