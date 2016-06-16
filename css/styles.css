@@ -9,6 +9,46 @@
   display: none;
 }
 
+.lead {
+  width: 50%;
+  text-align: center;
+  margin-left: 25%;
+  margin-top: 2%;
+}
+
+.modal-title {
+  font-size: 36px;
+}
+
+#myModalRolled {
+  margin-top: 30%;
+  padding: 10%;
+  text-align: center;
+}
+
+#myModal {
+  text-align: center;
+  margin-top: 250px;
+  color: #E11911;
+}
+
+/*.modal-backdrop {
+background-color: #CD0611;
+}
+
+.modal-backdrop-win {
+background-color: #0F8CAA;
+}*/
+
+.modal-backdrop {
+background-color: #CD0611;
+}
+
+.blue-backdrop {
+background-color: #0F8CAA;
+}
+
+
 .gamePlay {
   display: none;
 }
@@ -18,6 +58,7 @@
   background-color: #FEFEFE;
   opacity: 0.9;
   color: #E77C12;
+  text-align: center;
 }
 
 .jumbotron h1{
@@ -70,16 +111,17 @@ body {
   font-family: 'Exo 2', sans-serif;
   font-weight: 400;
 }
+
+/*#E77C12, #E9B373*/
+
 .btn-roll {
-  background-color: #DAE3B6;
-  color: black;
-  border: 1px solid #AAB684;
+  background-color: #ef8c2a;
+  color: white;
   margin-right: 4%;
 }
 .btn-roll:hover {
-  background-color: #AAB684;
+  background-color: #E77C12;
   color: white;
-  border: 1px solid #AAB684;
 }
 
 h3 {
@@ -98,4 +140,18 @@ p {
   font-family: 'Exo 2', sans-serif;
   font-weight: 700;
   font-size: 16px;
+}
+
+.btn-lg {
+  margin-top: 30px;
+  width: 175px;
+  background-color: #E77C12;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.btn-lg:hover {
+  background-color: transparent;
+  border: 1px solid #E77C12;
+  color: #E77C12;
 }

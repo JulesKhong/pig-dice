@@ -29,9 +29,11 @@ Player.prototype.getRandomNumber = function() {
   randomNumber = Math.floor(Math.random() * upper) + 1;
   if (randomNumber === 1){
   this.score = 0;
-  alert("You rolled a 1! Your turn is over!");
+  $("#myModalRolled").modal("show");
+  // alert("You rolled a 1! Your turn is over!");
   this.rolls = [];
   disableButton();
+  $(".scoreDisplay").text("");
   }
   else {
   rollValue = randomNumber;
@@ -49,10 +51,10 @@ Player.prototype.calculateScore = function() {
 }
 
 Player.prototype.youWin = function(){
-  if (this.totalScore >= 10){
-    alert("You win!");
-    $(".gameYouWin").show();
-    $(".gamePlay").hide();
+  if (this.totalScore >= 20){
+    $("#myModal").modal("show");
+    $(".modal-backdrop").removeClass();
+    $(".modal-backdrop").addClass("blue-backdrop");
   }
 }
 
@@ -69,6 +71,8 @@ var playerTwo;
   var playerTwo = new Player();
   $("#startGame").hide();
   $(".gamePlay").show();
+  $(".lead").text("");
+  // $("#myModal").modal({ show: false});
 
 // FRONT END LOGIC FOR PLAYER ONE
  $("#roll-player1").click(function(event){

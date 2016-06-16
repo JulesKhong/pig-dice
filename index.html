@@ -1,48 +1,77 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="js/jquery-3.0.0.js" type="text/javascript"></script>
-    <script src="js/scripts.js" type="text/javascript"></script>
+
     <link rel="stylesheet" href="css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="css/styles.css" media="screen" title="no title" charset="utf-8">
     <link href='https://fonts.googleapis.com/css?family=Exo+2:400,900,700' rel='stylesheet' type='text/css'>
     <title>Pig Dice</title>
+    <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/scripts.js" type="text/javascript"></script>
   </head>
   <body class="imageBackground">
     <div class="jumbotron">
+<!-- START GAME SCREEN -->
       <h1>Pig Dice</h1>
+      <p class="lead">The first player to 100 points wins! Roll the dice until you hold to keep your points for the turn, or until you roll a 1 and you lose any points for that turn. Good luck!</p>
       <button type="submit" class="btn btn-lg" id="startGame">Begin!</button>
     </div>
     <div class="container">
+<!-- GAME PLAY SCREEN -->
       <div class="row">
         <div class="gamePlay">
           <div class="col-md-4">
             <img src="img/playerOnepig.png" alt="pig illustration" />
             <h3>Player 1</h3>
             <h3><span id="current-roll1" class="scoreDisplay"></span></h3>
-            <button type="submit" name="button1" id="roll-player1" class="btn btn-roll">Roll</button>
+            <button type="submit" name="button1" id="roll-player1" class="btn btn-roll">ROLL</button>
             <button type="submit" name="button1" id="hold-player1" class="btn btn-danger">Hold Please</button>
             <p class="card-roll">Your current roll: <span id="current-series1"></span></p>
-            <p>Your total score: <span class="total-score1"></span></p>
+            <p>TOTAL SCORE: <span class="total-score1"></span></p>
           </div>
           <div class="col-md-4">
             <img src="img/playerTwopig.png" alt="pig illustration" />
             <h3>Player 2</h3>
             <h3><span id="current-roll2" class="scoreDisplay"></span></h3>
-            <button type="submit" name="button2" id="roll-player2" class="btn btn-roll" disabled>Roll</button>
+            <button type="submit" name="button2" id="roll-player2" class="btn btn-roll" disabled>ROLL</button>
             <button type="submit" name="button2" id="hold-player2" class="btn btn-danger" disabled>Hold Please</button>
             <p class="card-roll">Your current roll: <span id="current-series2"></span></p>
-            <p>Your total score: <span class="total-score2"></span></p>
+            <p>TOTAL SCORE: <span class="total-score2"></span></p>
           </div>
         </div>
-        <div class="gameYouWin">
-          <div class="col-md-6">
-            <h1>Yay! You Win!</h1>
-            <p>Player one's total score: <span class="total-score1"></span></p>
-            <p>Player two's total score: <span class="total-score2"></span></p>
-            <button type="submit" name="button" id="playAgain">Play Again</button>
-          </div>
-        </div>
+        <!-- MODAL ROLLED ONE BELOW -->
+
+            <div class="modal fade" id="myModalRolled" tabindex="-1" role="dialog">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">You rolled a 1! </h4>
+                    <p>No points for you.</p>
+                  </div>
+                </div><!-- /.modal-content -->
+              </div><!-- /.modal-dialog -->
+            </div>
+        <!--  MODAL ABOVE -->
+        <!-- MODAL YOU WIN BELOW -->
+
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+              <div class="background">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h4 class="modal-title">You Win!</h4>
+                      <p>Player one's total score: <span class="total-score1"></span></p>
+                      <p>Player two's total score: <span class="total-score2"></span></p>
+                    </div>
+                    <button class="btn btn-lg" type="submit" name="button" id="playAgain">Play Again</button>
+                  </div>
+                </div><!-- /.modal-content -->
+              </div><!-- /.modal-dialog -->
+            </div>
+        <!--  MODAL ABOVE -->
+
       </div>
     </div>
   </body>
