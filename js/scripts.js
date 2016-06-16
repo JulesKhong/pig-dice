@@ -97,7 +97,6 @@ var playerTwo;
  $("#roll-player2").click(function(event){
    event.preventDefault();
    playerTwo.getRandomNumber();
-
    $("#current-roll2").show();
    $("#current-roll2").text(playerTwo.rolls[playerTwo.rolls.length - 1]);
    $("#current-series2").text(playerTwo.rolls);

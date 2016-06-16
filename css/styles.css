@@ -32,14 +32,6 @@
   color: #E11911;
 }
 
-/*.modal-backdrop {
-background-color: #CD0611;
-}
-
-.modal-backdrop-win {
-background-color: #0F8CAA;
-}*/
-
 .modal-backdrop {
 background-color: #CD0611;
 }
@@ -111,8 +103,6 @@ body {
   font-family: 'Exo 2', sans-serif;
   font-weight: 400;
 }
-
-/*#E77C12, #E9B373*/
 
 .btn-roll {
   background-color: #ef8c2a;
