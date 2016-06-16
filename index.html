@@ -9,27 +9,40 @@
   </head>
   <body>
     <div class="container">
+      <div class="jumbotron">
       <h1>Pig Dice</h1>
-      <button type="submit" class="btn btn-success" id="startGame">Begin!</button>
+      <button type="submit" class="btn btn-success btn-lg" id="startGame">Begin!</button>
+      </div>
       <div class="row">
-        <div class="col-md-6">
-          <h1>Player 1</h1>
-          <h1>You rolled: <span id="current-roll1"></span></h1>
-          <button type="submit" name="button1" id="roll-player1" class="btn btn-primary">Roll!</button>
-          <button type="submit" name="button1" id="hold-player1" class="btn btn-danger">Hold Please</button>
-          <p><span id="current-series1"></span></p>
-          <p><span id="current-score1"></span></p>
-          <p><span id="total-score1"></span></p>
+        <div class="gamePlay">
+          <div class="col-md-6">
+            <h1>Player 1</h1>
+            <h3><span id="current-roll1"></span></h3>
+            <button type="submit" name="button1" id="roll-player1" class="btn btn-primary">Roll!</button>
+            <button type="submit" name="button1" id="hold-player1" class="btn btn-danger">Hold Please</button>
+            <p>Your current roll<span id="current-series1"></span></p>
+            <!-- <p><span id="current-score1"></span></p> -->
+            <p>Player one's total score: <span class="total-score1"></span></p>
+          </div>
+          <div class="col-md-6">
+            <h1>Player 2</h1>
+            <h3><span id="current-roll2"></span></h3>
+            <button type="submit" name="button2" id="roll-player2" class="btn btn-primary" disabled>Roll!</button>
+            <button type="submit" name="button2" id="hold-player2" class="btn btn-danger" disabled>Hold Please</button>
+            <p>Your current roll <span id="current-series2"></span></p>
+            <!-- <p id="current-score2"></p> -->
+            <p>Player two's total score: <span class="total-score2"></span></p>
+          </div>
         </div>
-        <div class="col-md-6">
-          <h1>Player 2</h1>
-          <h1 id="current-roll2"></h1>
-          <button type="submit" name="button2" id="roll-player2" class="btn btn-primary">Roll!</button>
-          <button type="submit" name="button2" id="hold-player2" class="btn btn-danger">Hold Please</button>
-          <p id="current-score2"></p>
+        <div class="gameYouWin">
+          <div class="col-md-6">
+            <h1>Yay! You Win!</h1>
+            <p>Player one's total score: <span class="total-score1"></span></p>
+            <p>Player two's total score: <span class="total-score2"></span></p>
+            <button type="submit" name="button" id="playAgain">Play Again</button>
+          </div>
         </div>
       </div>
-
     </div>
   </body>
 </html>

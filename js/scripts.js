@@ -1,4 +1,4 @@
-// Back-end
+open // Back-end
 function Player (){ //change to a player object.**
   this.score = 0;
   this.rolls = [];
@@ -8,15 +8,9 @@ function Player (){ //change to a player object.**
 var randomNumber;
 var upper = 6;
 var rollValue;
-// function disableButton1(){
-//   document.getElementById("roll-player1").disabled = true;
-//   document.getElementById("hold-player1").disabled = true;
-// }
 
-
-// player one's buttons are disabling and enabling properly, clean up player two's functionality
 function disableButton(){
-  debugger;
+  // debugger;
   var buttonSwitch = document.getElementById("roll-player1").disabled;
   if (buttonSwitch === false){
     document.getElementById("roll-player1").disabled = true;
@@ -48,15 +42,19 @@ Player.prototype.getRandomNumber = function() {
 Player.prototype.calculateScore = function() {
   for (var i=0 ; i < this.rolls.length ; i++ ){
     this.score += this.rolls[i];
+    // this.rolls = [];
   } this.totalScore += this.score;
-  this.rolls = [];
-}
-Player.prototype.youWin = function(){
-  if (this.totalScore >= 100){
-    alert("You win!");
-  }
+    this.score = 0;
+    this.rolls = [];
 }
 
+Player.prototype.youWin = function(){
+  if (this.totalScore >= 10){
+    alert("You win!");
+    $(".gameYouWin").show();
+    $(".gamePlay").hide();
+  }
+}
 
 // FRONT END LOGIC
 $(document).ready(function(){
@@ -67,6 +65,8 @@ var playerTwo;
   $("#startGame").click(function(event){
   var playerOne = new Player();
   var playerTwo = new Player();
+  $("#startGame").hide();
+  $(".gamePlay").show();
 
 // FRONT END LOGIC FOR PLAYER ONE
  $("#roll-player1").click(function(event){
@@ -80,9 +80,9 @@ var playerTwo;
 
  $("#hold-player1").click(function(event){
    playerOne.calculateScore();
-   $("#total-score1").text(playerOne.totalScore);
-   this.score = 0;
+   $(".total-score1").text(playerOne.totalScore);
    $("#current-series1").text("");
+   playerOne.youWin();
    disableButton();
  });
 
@@ -98,10 +98,14 @@ var playerTwo;
 
  $("#hold-player2").click(function(event){
    playerTwo.calculateScore();
-   $("#total-score2").text(playerTwo.totalScore);
-   this.score = 0;
+   $(".total-score2").text(playerTwo.totalScore);
    $("#current-series2").text("");
-  //  disableButton2();
+   playerTwo.youWin();
+   disableButton();
+ });
+
+ $("#playAgain").click(function(event){
+   location.reload();
  });
 
 });
