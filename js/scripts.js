@@ -63,6 +63,8 @@ var playerTwo;
 
 // INITIATE PLAYER ONE AND PLAYER TWO OBJECTS
   $("#startGame").click(function(event){
+    $("body").removeClass();
+    $("body").addClass("gradient");
   var playerOne = new Player();
   var playerTwo = new Player();
   $("#startGame").hide();
@@ -84,6 +86,7 @@ var playerTwo;
    $("#current-series1").text("");
    playerOne.youWin();
    disableButton();
+   $(".scoreDisplay").text("");
  });
 
 // FRONT END LOGIC FOR PLAYER TWO
@@ -102,6 +105,7 @@ var playerTwo;
    $("#current-series2").text("");
    playerTwo.youWin();
    disableButton();
+   $(".scoreDisplay").text("");
  });
 
  $("#playAgain").click(function(event){

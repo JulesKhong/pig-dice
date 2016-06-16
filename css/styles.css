@@ -1,3 +1,10 @@
+.scoreDisplay {
+  font-size: 75px;
+  text-align: center;
+  line-height: 30px;
+  padding-left: 40%;
+}
+
 .gameYouWin {
   display: none;
 }
@@ -6,16 +13,89 @@
   display: none;
 }
 
-h1 {
-  text-align: center;
-  font-weight: light;
-}
-
 .jumbotron {
   text-align: center;
+  background-color: #FEFEFE;
+  opacity: 0.9;
+  color: #E77C12;
+}
+
+.jumbotron h1{
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 900;
 }
 
 #startGame {
   margin-top: 30px;
   width: 175px;
+  background-color: #E77C12;
+  color: white;
+}
+
+#startGame:hover {
+  background-color: transparent;
+  border: 1px solid #E77C12;
+  color: #E77C12;
+}
+
+.gradient {
+  background: linear-gradient(#E77C12, #E9B373);
+  background-repeat: no-repeat;
+  background-color: #E9B373;
+}
+
+.imageBackground {
+  background-image: url("../img/fly-pig.jpg");
+  background-color: #E9B06D;
+}
+
+body {
+  background-repeat: no-repeat;
+  background-position: right;
+  background-position: top;
+  background-size: 100%;
+}
+.col-md-4 {
+  background-color: white;
+  border-radius: 20px;
+  margin-left: 10%;
+  margin-top: 5%;
+  margin-bottom: 10%;
+  padding: 3%;
+}
+
+.btn{
+  margin-top: 10px;
+  width: 47%;
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 400;
+}
+.btn-roll {
+  background-color: #DAE3B6;
+  color: black;
+  border: 1px solid #AAB684;
+  margin-right: 4%;
+}
+.btn-roll:hover {
+  background-color: #AAB684;
+  color: white;
+  border: 1px solid #AAB684;
+}
+
+h3 {
+  color: #E77C12;
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 700;
+}
+
+img {
+  width: 100%;
+}
+.card-roll {
+  margin-top: 25px;
+}
+p {
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
 }
